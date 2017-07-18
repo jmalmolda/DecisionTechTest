@@ -12,7 +12,7 @@ namespace DecisionTechTest.Basket.PriceCalculator.Implementation
     {
         public decimal CalculatePrice(IEnumerable<IProduct> products)
         {
-            throw new NotImplementedException();
+            return products?.Sum(product => product.Cost) ?? 0M;
         }
     }
 }
