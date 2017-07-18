@@ -1,2 +1,7 @@
-DecisionTechTest.Basket.Tests/obj/
-DecisionTechTest.Basket/obj/
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+.vs

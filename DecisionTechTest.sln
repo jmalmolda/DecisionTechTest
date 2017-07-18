@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTechTest.Basket", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTechTest.Basket.Tests", "DecisionTechTest.Basket.Tests\DecisionTechTest.Basket.Tests.csproj", "{A050F229-A0F9-420A-8283-15047F299628}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTechTest.Basket.Spec", "DecisionTechTest.Basket.Spec\DecisionTechTest.Basket.Spec.csproj", "{558BA3F6-5C71-49D8-901A-E0FEE7C30FB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A050F229-A0F9-420A-8283-15047F299628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A050F229-A0F9-420A-8283-15047F299628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A050F229-A0F9-420A-8283-15047F299628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{558BA3F6-5C71-49D8-901A-E0FEE7C30FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{558BA3F6-5C71-49D8-901A-E0FEE7C30FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{558BA3F6-5C71-49D8-901A-E0FEE7C30FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{558BA3F6-5C71-49D8-901A-E0FEE7C30FB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
