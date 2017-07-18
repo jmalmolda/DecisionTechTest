@@ -12,11 +12,11 @@ namespace DecisionTechTest.Basket.PriceCalculator.Implementation
 {
     public class PriceCalculator : IPriceCalculator
     {
-        private readonly IOfferHandler _handler;
+        private readonly List<IOfferHandler> _handlers;
 
-        public PriceCalculator(IOfferHandler handler)
+        public PriceCalculator(List<IOfferHandler> handlers)
         {
-            _handler = handler;
+            _handlers = handlers;
         }
 
         public decimal CalculatePrice(IEnumerable<IProduct> products)
@@ -27,8 +27,10 @@ namespace DecisionTechTest.Basket.PriceCalculator.Implementation
                     Product = product,
                     IsProcessed = false
                 }).ToList();
-
-            processedProducts = _handler.ApplyOffer(processedProducts);
+            foreach (var handler in _handlers)
+            {
+                processedProducts = handler.ApplyOffer(processedProducts);
+            }
 
             return processedProducts?.Sum(processedProduct => processedProduct.Product.Cost) ?? 0M;
         }

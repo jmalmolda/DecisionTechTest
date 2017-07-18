@@ -11,7 +11,10 @@ namespace DecisionTechTest.Basket.Spec
     [Binding]
     public class BasketSteps
     {
-        private static readonly IOfferHandler Handler = new TwoButterOffer();
+        private static readonly List<IOfferHandler> Handler = new List<IOfferHandler>
+        {
+            new TwoButterOffer()
+        };
         private static readonly PriceCalculator.Implementation.PriceCalculator Calculator =
             new PriceCalculator.Implementation.PriceCalculator(Handler);
         private readonly Basket _basket = new Basket(Calculator);
@@ -64,5 +67,15 @@ namespace DecisionTechTest.Basket.Spec
                 _basket.AddProduct(new Bread());
             }
         }
+
+        [Given(@"I have added (.*) milk products to the basket")]
+        public void GivenIHaveAddedMilkProductsToTheBasket(int p0)
+        {
+            for (int i = 0; i < p0; i++)
+            {
+                _basket.AddProduct(new Milk());
+            }
+        }
+
     }
 }

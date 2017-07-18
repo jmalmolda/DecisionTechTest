@@ -40,9 +40,11 @@ namespace DecisionTechTest.Basket.Tests
             handler.ApplyOffer(Arg.Any<List<ProductProcessedCost>>())
                 .Returns(new List<ProductProcessedCost> { productCost1, productCost2 });
 
+            var handlers = new List<IOfferHandler> {handler};
+
             // create system under test
             PriceCalculator.Implementation.PriceCalculator priceCalculator =
-                new PriceCalculator.Implementation.PriceCalculator(handler);
+                new PriceCalculator.Implementation.PriceCalculator(handlers);
 
             // execute test
             decimal result = priceCalculator.CalculatePrice(new List<IProduct>() { product1 });

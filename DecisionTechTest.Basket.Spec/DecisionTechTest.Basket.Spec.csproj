@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Scenario2.feature</DependentUpon>
     </Compile>
+    <Compile Include="Scenario3.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Scenario3.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -83,6 +88,10 @@
     <None Include="Scenario2.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Scenario2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Scenario3.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Scenario3.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
