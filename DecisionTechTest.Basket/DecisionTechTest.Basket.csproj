@@ -41,12 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basket.cs" />
+    <Compile Include="PriceCalculator\Interface\IPriceCalculator.cs" />
     <Compile Include="Products\Implementation\Milk.cs" />
     <Compile Include="Products\Implementation\Bread.cs" />
     <Compile Include="Products\Implementation\Butter.cs" />
     <Compile Include="Products\Implementation\Product.cs" />
     <Compile Include="Products\Interface\IProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PriceCalculator\Implementation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

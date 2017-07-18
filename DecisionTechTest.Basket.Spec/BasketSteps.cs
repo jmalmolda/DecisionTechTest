@@ -8,7 +8,7 @@ namespace DecisionTechTest.Basket.Spec
     [Binding]
     public class BasketSteps
     {
-        private Basket basket = new Basket();
+        private Basket basket = new Basket(new PriceCalculator.Implementation.PriceCalculator());
         private decimal totalPrice = 0.0M;
         [Given(@"I have added a bread product to the basket")]
         public void GivenIHaveAddedABreadProductToTheBasket()
