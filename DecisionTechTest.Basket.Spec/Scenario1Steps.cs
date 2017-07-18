@@ -13,7 +13,8 @@ namespace DecisionTechTest.Basket.Spec
     {
         private static readonly List<IOfferHandler> Handler = new List<IOfferHandler>
         {
-            new TwoButterOffer()
+            new TwoButterOffer(),
+            new ThreeMilkOffer()
         };
         private static readonly PriceCalculator.Implementation.PriceCalculator Calculator =
             new PriceCalculator.Implementation.PriceCalculator(Handler);
