@@ -10,7 +10,7 @@ namespace DecisionTechTest.Basket.OfferHandlers.Implementation
 {
     public abstract class OfferHandler : IOfferHandler
     {
-        public List<ProductProcessedCost> ApplyOffer(List<ProductProcessedCost> products)
+        public virtual List<ProductProcessedCost> ApplyOffer(List<ProductProcessedCost> products)
         {
             throw new NotImplementedException();
         }

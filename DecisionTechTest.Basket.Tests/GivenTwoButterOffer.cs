@@ -41,7 +41,7 @@ namespace DecisionTechTest.Basket.Tests
             result.Count.Should().Equal(2);
             result[0].Product.Cost.Should().Equal(1M);
             result[0].IsProcessed.Should().Be.False();
-            result[1].Product.Cost.Should().Equal(1M);
+            result[1].Product.Cost.Should().Equal(2M);
             result[1].IsProcessed.Should().Be.False();
         }
 
