@@ -76,6 +76,12 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DecisionTechTest.Basket\DecisionTechTest.Basket.csproj">
+      <Project>{c987aac0-0e6f-4124-b774-b1eca23516c9}</Project>
+      <Name>DecisionTechTest.Basket</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

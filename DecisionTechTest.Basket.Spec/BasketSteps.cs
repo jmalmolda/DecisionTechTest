@@ -1,4 +1,6 @@
 ﻿using System;
+using DecisionTechTest.Basket.Products.Implementation;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
 namespace DecisionTechTest.Basket.Spec
@@ -6,34 +8,37 @@ namespace DecisionTechTest.Basket.Spec
     [Binding]
     public class BasketSteps
     {
+        private Basket basket = new Basket();
+        private decimal totalPrice = 0.0M;
         [Given(@"I have added a bread product to the basket")]
         public void GivenIHaveAddedABreadProductToTheBasket()
         {
-            ScenarioContext.Current.Pending();
+            basket.AddProduct(new Bread());
         }
         
         [Given(@"I have added a butter product to the basket")]
         public void GivenIHaveAddedAButterProductToTheBasket()
         {
-            ScenarioContext.Current.Pending();
+            basket.AddProduct(new Butter());
         }
-        
+
         [Given(@"I have added a milk product to the basket")]
         public void GivenIHaveAddedAMilkProductToTheBasket()
         {
-            ScenarioContext.Current.Pending();
+            basket.AddProduct(new Milk());
+
         }
-        
+
         [When(@"I get the total price")]
         public void WhenIGetTheTotalPrice()
         {
-            ScenarioContext.Current.Pending();
+            totalPrice = basket.GetTotalPrice();
         }
         
         [Then(@"the result should be £(.*)")]
         public void ThenTheResultShouldBe(Decimal p0)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(totalPrice, p0);
         }
     }
 }
