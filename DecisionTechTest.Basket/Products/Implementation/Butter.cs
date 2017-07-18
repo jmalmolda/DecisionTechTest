@@ -8,5 +8,6 @@ namespace DecisionTechTest.Basket.Products.Implementation
 {
     public class Butter : Product
     {
+        public override decimal Cost => 0.80M;
     }
 }
