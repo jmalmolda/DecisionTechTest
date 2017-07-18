@@ -11,20 +11,23 @@ namespace DecisionTechTest.Basket
     public class Basket
     {
         private readonly IPriceCalculator _calculator;
+        private List<IProduct> _products;
 
         public Basket(IPriceCalculator calculator)
         {
             _calculator = calculator;
+            _products = new List<IProduct>();
         }
+
 
         public void AddProduct(IProduct product)
         {
-            throw new NotImplementedException();
+            _products.Add(product);
         }
 
         public decimal GetTotalPrice()
         {
-            throw new NotImplementedException();
+            return _calculator.CalculatePrice(_products);
         }
     }
 }
