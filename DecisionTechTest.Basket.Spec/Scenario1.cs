@@ -18,7 +18,7 @@ namespace DecisionTechTest.Basket.Spec
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class BasketFeature
+    public partial class Scenario1Feature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -48,7 +48,7 @@ namespace DecisionTechTest.Basket.Spec
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Basket")))
             {
-                global::DecisionTechTest.Basket.Spec.BasketFeature.FeatureSetup(null);
+                global::DecisionTechTest.Basket.Spec.Scenario1Feature.FeatureSetup(null);
             }
         }
         

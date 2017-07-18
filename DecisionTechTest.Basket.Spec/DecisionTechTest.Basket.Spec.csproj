@@ -58,21 +58,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Basket.feature.cs">
+    <Compile Include="Scenario1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Basket.feature</DependentUpon>
+      <DependentUpon>Scenario1.feature</DependentUpon>
     </Compile>
-    <Compile Include="BasketSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenario1Steps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Basket.feature">
+    <None Include="Scenario1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Basket.feature.cs</LastGenOutput>
+      <LastGenOutput>Scenario1.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

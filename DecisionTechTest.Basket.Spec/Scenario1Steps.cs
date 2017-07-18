@@ -15,7 +15,7 @@ namespace DecisionTechTest.Basket.Spec
         {
             _basket.AddProduct(new Bread());
         }
-        
+
         [Given(@"I have added a butter product to the basket")]
         public void GivenIHaveAddedAButterProductToTheBasket()
         {
@@ -34,7 +34,7 @@ namespace DecisionTechTest.Basket.Spec
         {
             _totalPrice = _basket.GetTotalPrice();
         }
-        
+
         [Then(@"the result should be £(.*)")]
         public void ThenTheResultShouldBe(Decimal p0)
         {
