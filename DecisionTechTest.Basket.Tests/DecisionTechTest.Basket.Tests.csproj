@@ -60,6 +60,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GivenThreeMilkOffer.cs" />
     <Compile Include="GivenTwoButterOffer.cs" />
     <Compile Include="GivenPriceCalculator.cs" />
     <Compile Include="GivenBasket.cs" />

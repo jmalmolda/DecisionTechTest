@@ -43,6 +43,7 @@
     <Compile Include="Basket.cs" />
     <Compile Include="Model\ProductProcessedCost.cs" />
     <Compile Include="OfferHandlers\Implementation\OfferHandler.cs" />
+    <Compile Include="OfferHandlers\Implementation\ThreeMilkOffer.cs" />
     <Compile Include="OfferHandlers\Implementation\TwoButterOffer.cs" />
     <Compile Include="OfferHandlers\Interface\IOfferHandler.cs" />
     <Compile Include="PriceCalculator\Implementation\PriceCalculator.cs" />
