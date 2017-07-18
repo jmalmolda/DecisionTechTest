@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Basket.cs" />
     <Compile Include="Model\ProductProcessedCost.cs" />
+    <Compile Include="OfferHandlers\Implementation\OfferHandler.cs" />
+    <Compile Include="OfferHandlers\Implementation\TwoButterOffer.cs" />
     <Compile Include="OfferHandlers\Interface\IOfferHandler.cs" />
     <Compile Include="PriceCalculator\Implementation\PriceCalculator.cs" />
     <Compile Include="PriceCalculator\Interface\IPriceCalculator.cs" />
@@ -52,9 +54,7 @@
     <Compile Include="Products\Interface\IProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OfferHandlers\Implementation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

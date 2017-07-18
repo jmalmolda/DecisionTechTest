@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using DecisionTechTest.Basket.OfferHandlers.Implementation;
+using DecisionTechTest.Basket.OfferHandlers.Interface;
 using DecisionTechTest.Basket.Products.Implementation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
@@ -8,7 +11,10 @@ namespace DecisionTechTest.Basket.Spec
     [Binding]
     public class BasketSteps
     {
-        private readonly Basket _basket = new Basket(new PriceCalculator.Implementation.PriceCalculator());
+        private static readonly IOfferHandler Handler = new TwoButterOffer();
+        private static readonly PriceCalculator.Implementation.PriceCalculator Calculator =
+            new PriceCalculator.Implementation.PriceCalculator(Handler);
+        private readonly Basket _basket = new Basket(Calculator);
         private decimal _totalPrice = 0.0M;
         [Given(@"I have added a bread product to the basket")]
         public void GivenIHaveAddedABreadProductToTheBasket()

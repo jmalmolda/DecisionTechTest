@@ -3,7 +3,7 @@
 	£3.10
 
 @mytag
-Scenario: Add two numbers
+Scenario: 2Bread2Butter
 	Given I have added 2 butter products to the basket
 	And I have added 2 bread products to the basket
 	When I get the total price
