@@ -8,6 +8,6 @@ namespace DecisionTechTest.Basket.Products.Interface
 {
     public interface IProduct
     {
-        decimal Cost { get; }
+        decimal Cost { get; set; }
     }
 }

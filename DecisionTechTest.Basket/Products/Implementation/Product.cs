@@ -9,6 +9,6 @@ namespace DecisionTechTest.Basket.Products.Implementation
 {
     public abstract class Product : IProduct
     {
-        public virtual decimal Cost { get; }
+        public decimal Cost { get; set; }
     }
 }
