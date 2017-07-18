@@ -40,5 +40,23 @@ namespace DecisionTechTest.Basket.Spec
         {
             Assert.AreEqual(_totalPrice, p0);
         }
+
+        [Given(@"I have added (.*) butter products to the basket")]
+        public void GivenIHaveAddedButterProductsToTheBasket(int p0)
+        {
+            for (int i = 0; i < p0; i++)
+            {
+                _basket.AddProduct(new Butter());
+            }
+        }
+
+        [Given(@"I have added (.*) bread products to the basket")]
+        public void GivenIHaveAddedBreadProductsToTheBasket(int p0)
+        {
+            for (int i = 0; i < p0; i++)
+            {
+                _basket.AddProduct(new Bread());
+            }
+        }
     }
 }
