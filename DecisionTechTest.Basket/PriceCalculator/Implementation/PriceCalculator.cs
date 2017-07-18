@@ -24,13 +24,13 @@ namespace DecisionTechTest.Basket.PriceCalculator.Implementation
             List<ProductProcessedCost> processedProducts = products
                 .Select(product => new ProductProcessedCost
                 {               
-                    Cost = product.Cost,
+                    Product = product,
                     IsProcessed = false
                 }).ToList();
 
             processedProducts = _handler.ApplyOffer(processedProducts);
 
-            return processedProducts?.Sum(product => product.Cost) ?? 0M;
+            return processedProducts?.Sum(processedProduct => processedProduct.Product.Cost) ?? 0M;
         }
     }
 }

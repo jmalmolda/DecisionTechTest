@@ -24,12 +24,15 @@ namespace DecisionTechTest.Basket.Tests
             const decimal priceProduct1 = 1;
             const decimal priceProduct2 = 2;
 
-            // set up dependencies
-            ProductProcessedCost productCost1 = new ProductProcessedCost { Cost = priceProduct1, IsProcessed = true };
-            ProductProcessedCost productCost2 = new ProductProcessedCost { Cost = priceProduct2, IsProcessed = true };
-
             IProduct product1 = Substitute.For<IProduct>();
             product1.Cost.Returns(priceProduct1);
+            IProduct product2 = Substitute.For<IProduct>();
+            product2.Cost.Returns(priceProduct2);
+
+            // set up dependencies
+            ProductProcessedCost productCost1 = new ProductProcessedCost { Product = product1, IsProcessed = true };
+            ProductProcessedCost productCost2 = new ProductProcessedCost { Product = product2, IsProcessed = true };
+
 
             // create a handler stub that always returns a list of productCost1 and productCost2
             var handler = Substitute.For<IOfferHandler>();
@@ -47,7 +50,7 @@ namespace DecisionTechTest.Basket.Tests
             // assert call to handler with product1 unprocessed
             handler.Received()
                 .ApplyOffer(
-                    Arg.Is<List<ProductProcessedCost>>(list => list.Any(pc => pc.Cost == priceProduct1 && !pc.IsProcessed)));
+                    Arg.Is<List<ProductProcessedCost>>(list => list.Any(pc => pc.Product.Cost == priceProduct1 && !pc.IsProcessed)));
 
             // assert the result
             result.Should().Equal(priceProduct1 + priceProduct2);
